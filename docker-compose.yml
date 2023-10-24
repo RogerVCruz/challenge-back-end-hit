@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  database_ame:  
+    image: postgres
+    container_name: database_ame
+    restart: no
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ame_database
+      - PGDATA=/data/postgres
+    volumes:
+      - pgdata:/data/postgres
+  app:
+    build: .
+    container_name: ameapi
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/app
+
+volumes:
+  pgdata:
+    driver: local

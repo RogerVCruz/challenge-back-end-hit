@@ -1,7 +1,7 @@
-import { prisma } from '../../infra/Prisma/client';
-import { IPlanetCreateDTO } from '../../dtos/IPlanetCreateDTO';
-import { Planet } from '../../entity/Planet';
-import { IPlanetRepository } from '../IPlanetRepository';
+import { prisma } from '../../../../../infra/Prisma/client';
+import { IPlanetCreateDTO } from '../../../../../dtos/IPlanetCreateDTO';
+import { Planet } from '../entities/Planet';
+import { IPlanetRepository } from '../../../repository/IPlanetRepository';
 
 
 class PlanetRepository implements IPlanetRepository {

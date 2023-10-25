@@ -2,7 +2,7 @@ import express from 'express';
 
 import 'reflect-metadata';
 
-import './shared/container';
+import '../../container';
 
 import { router } from './routes';
 

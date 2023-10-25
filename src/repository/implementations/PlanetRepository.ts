@@ -1,4 +1,4 @@
-import { prisma } from '../../Prisma/client';
+import { prisma } from '../../infra/Prisma/client';
 import { IPlanetCreateDTO } from '../../dtos/IPlanetCreateDTO';
 import { Planet } from '../../entity/Planet';
 import { IPlanetRepository } from '../IPlanetRepository';

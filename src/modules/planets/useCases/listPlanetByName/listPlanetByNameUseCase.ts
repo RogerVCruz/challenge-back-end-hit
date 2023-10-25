@@ -1,8 +1,8 @@
 import { inject, injectable } from 'tsyringe';
 
-import { Planet } from '../../entity/Planet';
-import { IPlanetRepository } from '../../repository/IPlanetRepository';
-import { IStarWarsDB } from '../../providers/starwarsdb/IStarWarsDB';
+import { Planet } from '../../../../entity/Planet';
+import { IPlanetRepository } from '../../../../repository/IPlanetRepository';
+import { IStarWarsDB } from '../../../../providers/starwarsdb/IStarWarsDB';
 
 @injectable()
 class ListPlanetByNameUseCase {

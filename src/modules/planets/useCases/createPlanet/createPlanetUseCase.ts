@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 
-import { IPlanetCreateDTO } from '../../dtos/IPlanetCreateDTO';
-import { IPlanetRepository } from '../../repository/IPlanetRepository';
+import { IPlanetCreateDTO } from '../../../../dtos/IPlanetCreateDTO';
+import { IPlanetRepository } from '../../../../repository/IPlanetRepository';
 
 
 

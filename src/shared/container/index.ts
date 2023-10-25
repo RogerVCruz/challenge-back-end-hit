@@ -1,6 +1,6 @@
 import { container } from 'tsyringe';
 
-import { IPlanetRepository } from '../../modules/planets/repository/IPlanetRepository';
+import { IPlanetRepository } from '../../modules/planets/infra/prisma/repositories/IPlanetRepository';
 import { PlanetRepository } from '../../modules/planets/infra/prisma/repositories/PlanetRepository';
 import { IStarWarsDB } from '../../providers/starwarsdb/IStarWarsDB';
 import { StarWarsDB } from '../../providers/starwarsdb/implementations/StarWarsDB';

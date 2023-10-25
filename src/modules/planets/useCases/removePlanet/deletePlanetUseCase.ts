@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 
-import { IPlanetRepository } from '../../repository/IPlanetRepository';
+import { IPlanetRepository } from '../../infra/prisma/repositories/IPlanetRepository';
 
 @injectable()
 class DeletePlanetUseCase {

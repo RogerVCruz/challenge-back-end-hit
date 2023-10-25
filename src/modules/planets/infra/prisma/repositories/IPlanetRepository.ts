@@ -1,5 +1,5 @@
-import { IPlanetCreateDTO } from '../dtos/IPlanetCreateDTO';
-import { Planet } from '../infra/prisma/entities/Planet';
+import { IPlanetCreateDTO } from '../../../dtos/IPlanetCreateDTO';
+import { Planet } from '../entities/Planet';
 
 interface IPlanetRepository {
   createPlanet(data: IPlanetCreateDTO): Promise<void>;

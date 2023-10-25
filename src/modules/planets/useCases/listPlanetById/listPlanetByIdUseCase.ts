@@ -3,7 +3,7 @@ import { inject, injectable } from 'tsyringe';
 import { Planet } from '../../entity/Planet';
 
 import { IStarWarsDB } from '../../providers/starwarsdb/IStarWarsDB';
-import { IPlanetRepository } from '../../repository/IPlanetRepository';
+import { IPlanetRepository } from '../../infra/prisma/repositories/IPlanetRepository';
 
 @injectable()
 class ListPlanetByIdUseCase {

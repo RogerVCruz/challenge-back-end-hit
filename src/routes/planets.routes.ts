@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { CreatePlanetController } from '../useCases/createPlanet/createPlanetController';
-import { ListPlanetsController } from '../useCases/listPlanets/listPlanetsController';
-import { ListPlanetByNameController } from '../useCases/listPlanetByName/listPlanetByNameController';
-import { ListPlanetByIdController } from '../useCases/listPlanetById/listPlanetByIdController';
-import { DeletePlanetController } from '../useCases/removePlanet/deletePlanetController';
+import { CreatePlanetController } from '../modules/planets/useCases/createPlanet/createPlanetController';
+import { ListPlanetsController } from '../modules/planets/useCases/listPlanets/listPlanetsController';
+import { ListPlanetByNameController } from '../modules/planets/useCases/listPlanetByName/listPlanetByNameController';
+import { ListPlanetByIdController } from '../modules/planets/useCases/listPlanetById/listPlanetByIdController';
+import { DeletePlanetController } from '../modules/planets/useCases/removePlanet/deletePlanetController';
 
 const planetsRoutes = Router();
 

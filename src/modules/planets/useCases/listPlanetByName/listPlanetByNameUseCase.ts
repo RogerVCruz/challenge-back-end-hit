@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 
-import { Planet } from '../../../../entity/Planet';
-import { IPlanetRepository } from '../../../../repository/IPlanetRepository';
+import { Planet } from '../../infra/prisma/entities/Planet';
+import { IPlanetRepository } from '../../repository/IPlanetRepository';
 import { IStarWarsDB } from '../../../../providers/starwarsdb/IStarWarsDB';
 
 @injectable()

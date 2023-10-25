@@ -1,4 +1,4 @@
-import { IPlanetCreateDTO } from '../../../dtos/IPlanetCreateDTO';
+import { IPlanetCreateDTO } from '../dtos/IPlanetCreateDTO';
 import { Planet } from '../infra/prisma/entities/Planet';
 
 interface IPlanetRepository {

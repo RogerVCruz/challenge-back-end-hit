@@ -17,3 +17,13 @@ model Planet {
 
   @@map("planets")
 }
+
+model User {
+  id String @id @default(uuid())
+  name String
+  email String @unique
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("users")
+}

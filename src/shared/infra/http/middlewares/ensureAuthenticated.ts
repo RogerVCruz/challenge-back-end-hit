@@ -14,7 +14,7 @@ export async function ensureAuthenticated(
   const { authorization } = request.headers;
 
   if(!authorization) {
-    throw new Error('Token missing');
+    return response.status(401).json({error: 'Token missing!'});
   }
 
   const token = authorization.split(' ')[1];

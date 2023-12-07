@@ -1,3 +1,4 @@
+import { Prisma } from '@prisma/client';
 import { prisma } from '../../../../../shared/infra/Prisma/client';
 import { IPlanetCreateDTO } from '../../../dtos/IPlanetCreateDTO';
 import { Planet } from '../entities/Planet';
@@ -5,9 +6,14 @@ import { IPlanetRepository } from './IPlanetRepository';
 
 
 class PlanetRepository implements IPlanetRepository {
+  private repository: Prisma.PlanetDelegate;
+
+  constructor() {
+    this.repository = prisma.planet;
+  }
  
   async findById(id: string): Promise<Planet | null> {
-    const planet = await prisma.planet.findUnique({
+    const planet = await this.repository.findUnique({
       where: {
         id
       }
@@ -17,7 +23,7 @@ class PlanetRepository implements IPlanetRepository {
   }
 
   async findByName(name: string): Promise<Planet | null> {
-    const planet = await prisma.planet.findFirst({
+    const planet = await this.repository.findFirst({
       where: {
         name
       }
@@ -27,13 +33,13 @@ class PlanetRepository implements IPlanetRepository {
   }
 
   async listPlanets(): Promise<Planet[]> {
-    const planets = await prisma.planet.findMany();
+    const planets = await this.repository.findMany();
 
     return planets;
   }
 
   async createPlanet({ name, weather, terrain }: IPlanetCreateDTO): Promise<void> {
-    await prisma.planet.create({
+    await this.repository.create({
       data: {
         name,
         weather,
@@ -44,7 +50,7 @@ class PlanetRepository implements IPlanetRepository {
 
   async removePlanet(id: string): Promise<void> {
 
-    await prisma.planet.delete({
+    await this.repository.delete({
       where: {
         id: id
       }

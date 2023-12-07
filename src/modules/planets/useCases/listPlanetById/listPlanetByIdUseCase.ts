@@ -1,9 +1,9 @@
 import { inject, injectable } from 'tsyringe';
 
-import { Planet } from '../../entity/Planet';
 
-import { IStarWarsDB } from '../../providers/starwarsdb/IStarWarsDB';
 import { IPlanetRepository } from '../../infra/prisma/repositories/IPlanetRepository';
+import { Planet } from '@prisma/client';
+import { IStarWarsDB } from '../../../../providers/starwarsdb/IStarWarsDB';
 
 @injectable()
 class ListPlanetByIdUseCase {

@@ -11,11 +11,13 @@ class DeletePlanetUseCase {
   ) {}
 
   async execute (id: string): Promise<void> {
-    if (!id) {
-      throw new Error('Insert a valid Id or Name');
+    const planetExists = await this.planetRepository.findById(id);
+
+    if (!planetExists) {
+      throw new Error('Insert a valid Id');
     }
 
-    this.planetRepository.removePlanet(id);
+    await this.planetRepository.removePlanet(id);
   }
 }
 
